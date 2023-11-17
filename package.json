@@ -1,6 +1,6 @@
 {
-  "name": "cocktailshaker",
-  "version": "1.0.0",
+  "name": "cocktails",
+  "version": "1.6.2",
   "description": "A CLI for setting up projects with different frameworks",
   "bin": {
     "cocktailshaker": "./dist/create-cocktail.js"

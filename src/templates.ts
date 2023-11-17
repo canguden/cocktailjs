@@ -1,18 +1,21 @@
 export const frameworks: Record<string, Record<string, string>> = {
   next: {
     "nextjs-shadcn-ui-tailwindcss-typescript-prettier-darkmode-react-icons":
-      "github:canguden/nextjs-starter#main",
+      "https://github.com/canguden/nextjs-starter.git",
   },
   react: {
-    "react-vite-typescript": "github:canguden/react-vite-typescript#main",
-    "react-tailwindcss": "github:canguden/react-basic#main",
-    "react-vite-tailwindcss": "github:canguden/react-vite-tailwindcss#main",
+    "react-vite-typescript":
+      "https://github.com/canguden/react-vite-typescript.git",
+    "react-tailwindcss": "https://github.com/canguden/react-basic.git",
+    "react-vite-tailwindcss":
+      "https://github.com/canguden/react-vite-tailwindcss.git",
   },
   vue: {
-    "vue-vite-typescript": "github:canguden/vue-vite-typescript#main",
+    "vue-vite-typescript":
+      "https://github.com/canguden/vue-vite-typescript.git",
     "vue3-vite-typescript-tailwindcss":
-      "github:canguden/vue3-vite-ts-twcss#main",
-    "nuxt-starter": "github:canguden/nuxt-starter#main",
+      "https://github.com/canguden/vue3-vite-ts-twcss.git",
+    "nuxt-starter": "https://github.com/canguden/nuxt-starter.git",
   },
 };
 
