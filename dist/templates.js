@@ -1,20 +1,130 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.getTemplates = exports.frameworks = void 0;
+exports.getTemplates = exports.frameworks = exports.integrations = void 0;
+exports.integrations = {
+    icons: {
+        'lucide-icons': {
+            name: 'Lucide Icons',
+            package: 'lucide-react'
+        },
+        'react-icons': {
+            name: 'React Icons',
+            package: 'react-icons'
+        },
+        'heroicons': {
+            name: 'Heroicons',
+            package: '@heroicons/react'
+        }
+    },
+    auth: {
+        'next-auth': {
+            name: 'NextAuth.js',
+            package: 'next-auth',
+            dependencies: ['@auth/prisma-adapter']
+        }
+    },
+    payments: {
+        stripe: {
+            name: 'Stripe',
+            package: '@stripe/stripe-js',
+            dependencies: ['stripe']
+        }
+    },
+    ai: {
+        openai: {
+            name: 'OpenAI',
+            package: 'openai'
+        },
+        anthropic: {
+            name: 'Anthropic',
+            package: '@anthropic-ai/sdk'
+        },
+        gemini: {
+            name: 'Google Gemini',
+            package: '@google/generative-ai'
+        },
+        vercelai: {
+            name: 'Vercel AI SDK',
+            package: '@vercel/ai'
+        }
+    },
+    database: {
+        'prisma': {
+            name: 'Prisma',
+            package: '@prisma/client',
+            dependencies: ['prisma']
+        },
+        'vercel-postgres': {
+            name: 'Vercel Postgres',
+            package: '@vercel/postgres',
+            dependencies: []
+        },
+        'supabase': {
+            name: 'Supabase',
+            package: '@supabase/supabase-js',
+            dependencies: []
+        },
+        'neondb': {
+            name: 'NeonDB',
+            package: '@neondatabase/serverless',
+            dependencies: ['dotenv']
+        },
+        'firebase': {
+            name: 'Firebase',
+            package: 'firebase',
+            dependencies: ['firebase-admin']
+        },
+        'mongodb': {
+            name: 'MongoDB Native',
+            package: 'mongodb',
+            dependencies: []
+        },
+        'mongoose': {
+            name: 'Mongoose ODM',
+            package: 'mongoose',
+            dependencies: []
+        }
+    },
+    ui: {
+        'shadcn': {
+            name: 'shadcn/ui',
+            package: '@radix-ui/react-slot',
+            dependencies: [
+                'class-variance-authority',
+                'clsx',
+                'tailwind-merge',
+                'tailwindcss-animate'
+            ]
+        }
+    },
+    state: {
+        'zustand': {
+            name: 'Zustand',
+            package: 'zustand',
+            dependencies: []
+        }
+    },
+    forms: {
+        'react-hook-form': {
+            name: 'React Hook Form + Zod',
+            package: 'react-hook-form',
+            dependencies: ['@hookform/resolvers', 'zod']
+        }
+    }
+};
 exports.frameworks = {
-    next: {
-        "nextjs-shadcn-ui-tailwindcss-typescript-prettier-darkmode-react-icons": "github:canguden/nextjs-starter#main",
-    },
-    react: {
-        "react-vite-typescript": "github:canguden/react-vite-typescript#main",
-        "react-tailwindcss": "github:canguden/react-basic#main",
-        "react-vite-tailwindcss": "github:canguden/react-vite-tailwindcss#main",
-    },
-    vue: {
-        "vue-vite-typescript": "github:canguden/vue-vite-typescript#main",
-        "vue3-vite-typescript-tailwindcss": "github:canguden/vue3-vite-ts-twcss#main",
-        "nuxt-starter": "github:canguden/nuxt-starter#main",
-    },
+    'next': {
+        baseTemplate: 'create-next-app',
+        configOptions: {
+            language: ['typescript', 'javascript'],
+            buildTool: ['turbopack', 'webpack'],
+            linting: {
+                eslint: true,
+                prettier: true
+            }
+        }
+    }
+    // Add other frameworks here
 };
 function getTemplates(framework) {
     return Object.keys(exports.frameworks[framework]);
