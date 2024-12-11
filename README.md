@@ -1,12 +1,12 @@
-# Cocktails 📦🍸
+# Boilerkit 📦🚀
 
-CocktailShaker is a command-line framework designed to scaffold projects using various templates for React, Vue, Next.js. (pilot)
+Boilerkit is a command-line tool designed to scaffold projects using various templates for React, Vue, Next.js. (pilot)
 
 ## Getting Started ⚡️
 
 To start using a template, simply run the following command in your terminal:
 
-npx cocktails
+npx boilerkit
 
 Follow the prompts to select the desired stack and template for your project. The tool will handle the setup and installation of the chosen template.
 
@@ -43,3 +43,4 @@ Contributions are welcome! Feel free to open issues or submit pull requests.
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 # nextjs-starter
+# boilerkit
